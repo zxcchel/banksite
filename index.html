@@ -133,8 +133,7 @@
       if (!name) return showNotification("Укажите имя вкладчика");
       const rateText = (parseFloat(document.getElementById('type').value)===0.05?"5%":"2%");
       const date = new Date().toLocaleString();
-      const txt = `📄 Договор банковского вклада\n\nВкладчик: ${name}\nТип вклада: ${rateText}\nТекущий баланс: ${balance.toFixed(2)} ₽\nДата оформления: ${date}\n\nБанк обязуется сохранить вклад и начислять проценты
-      .`;
+      const txt = `📄 Договор банковского вклада\n\nВкладчик: ${name}\nТип вклада: ${rateText}\nТекущий баланс: ${balance.toFixed(2)} ₽\nДата оформления: ${date}\n\n`;
       document.getElementById('contract').textContent = txt;
       pushHist("📄 Договор оформлен");
       saveAll();
